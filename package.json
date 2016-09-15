@@ -1,0 +1,25 @@
+{
+  "name": "lamp_beta",
+  "version": "1.0.0",
+  "description": "One Paragraph of project description goes here",
+  "main": "index.js",
+  "dependencies": {    
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamKrukowskiWeb/lamp_beta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamKrukowskiWeb/lamp_beta/issues"
+  },
+  "homepage": "https://github.com/AdamKrukowskiWeb/lamp_beta#readme"
+}
