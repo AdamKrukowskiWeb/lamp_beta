@@ -1,20 +1,27 @@
+// Load plugins
 var gulp = require('gulp')
     gutil = require('gulp-util');
     sass = require('gulp-sass');
+  
+// Styles 
+var input = './source/scss/**/*.scss';
+var output = './public/assets/css';
+var sassOptions = {
+  errLogToConsole: true,
+  outputStyle: 'expanded'
+};
 
 gulp.task('sass', function(){
-    return gulp.src('source/scss/**/*.scss');
-    .pipe(sass())
-    .pipe(gulp.dest('public/assets/stylesheets'));
+    return gulp
+    .src(input)
+    .pipe(sass(sassOptions).on('error', sass.logError))   
+    .pipe(gulp.dest(output));
 });
 
-gulp.task('sass:watch', function(){
-    gulp.watch('source/scss/**/*scss',['sass']);    
-  
+gulp.task('watch', function(){
+    gulp.watch(input, ['sass']);
 });
 
-
-
-gulp.task('default', function(){
-    return gutil.log("gulp smiga");
+gulp.task('default', ['sass'], function() {
+  return gutil.log('Gulp is running!')
 });
