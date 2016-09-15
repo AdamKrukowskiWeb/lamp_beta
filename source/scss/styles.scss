@@ -1,9 +1,14 @@
-$black: #333;
+$orange: #f8b195;
+$pink: #f67280;
+$fiolet: #c06c84;
+$purp: #6c5b7b;
+$blue: #355c7d;
+
 
 body {
-    background-color: #fff;
+    background-color: $orange;
 }
 
 h1, h2, h3 {
-    color: $black;
+    color: $blue;
 }
