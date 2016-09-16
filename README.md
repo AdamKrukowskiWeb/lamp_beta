@@ -20,7 +20,8 @@ A step by step series of examples that tell you have to get a development env ru
 
 Stay what the step will be
 
-```
+boostrap install http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
+
 Give the example
 ```
 
