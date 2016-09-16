@@ -36,7 +36,7 @@ gulp.task('watch', function(){
     gulp.watch(['./index.html'], ['html']);
 });
 
+// Tasks
 gulp.task('default', ['sass','server','watch']);
 
 
-//https://css-tricks.com/gulp-for-beginners/
