@@ -3,6 +3,8 @@ $pink: #f67280;
 $fiolet: #c06c84;
 $purp: #6c5b7b;
 $blue: #355c7d;
+$black: #363636;
+$light-black: #474747;
 
 
 body {
@@ -10,5 +12,9 @@ body {
 }
 
 h1, h2, h3 {
-    color: $blue;
+    color: $black;
+}
+p{
+    font-size: 30px;
+    color: $light-black;
 }
