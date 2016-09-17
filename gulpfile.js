@@ -3,6 +3,8 @@ var gulp = require('gulp')
 var sass = require('gulp-sass');
 var util = require('gulp-util');
 var connect = require('gulp-connect');
+var bower = require('gulp-bower');
+
   
 // sass
 var styleInput = './source/scss/**/*.scss';
@@ -11,11 +13,22 @@ var styleOutput = './public/assets/css';
 gulp.task('sass', function(){
     gulp
     .src(styleInput)
-    .pipe(sass())
-    
+    .pipe(sass())    
     .pipe(gulp.dest(styleOutput))
     .pipe(connect.reload()) // dodanie odswiezania do sass dzieki conenct
 });
+
+// boostrap-sass
+gulp.task('boostrap-sass', function(){
+    gulp
+    .src('./bower_components/bootstrap-sass/assets/stylesheets/all.scss')
+    .pipe(sass({
+        includePaths:['./bower_components/bootstrap-sass/assets/stylesheets']
+    }))    
+    .pipe(gulp.dest(styleOutput))
+    .pipe(connect.reload()) // dodanie odswiezania do sass dzieki conenct
+});
+
 
 // connect 
 gulp.task('server', function(){
@@ -36,7 +49,8 @@ gulp.task('watch', function(){
     gulp.watch(['./index.html'], ['html']);
 });
 
-gulp.task('default', ['sass','server','watch']);
+// Tasks
+gulp.task('default', ['sass','boostrap-sass','server','watch']);
 
 
-//https://css-tricks.com/gulp-for-beginners/
+//http://andwecode.com/better-frontend-with-gulp-and-bower/
