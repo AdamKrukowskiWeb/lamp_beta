@@ -3,8 +3,6 @@ var gulp = require('gulp')
 var sass = require('gulp-sass');
 var util = require('gulp-util');
 var connect = require('gulp-connect');
-var bower = require('gulp-bower');
-
   
 // sass
 var styleInput = './source/scss/**/*.scss';
@@ -17,18 +15,6 @@ gulp.task('sass', function(){
     .pipe(gulp.dest(styleOutput))
     .pipe(connect.reload()) // dodanie odswiezania do sass dzieki conenct
 });
-
-// boostrap-sass
-gulp.task('boostrap-sass', function(){
-    gulp
-    .src('./bower_components/bootstrap-sass/assets/stylesheets/all.scss')
-    .pipe(sass({
-        includePaths:['./bower_components/bootstrap-sass/assets/stylesheets']
-    }))    
-    .pipe(gulp.dest(styleOutput))
-    .pipe(connect.reload()) // dodanie odswiezania do sass dzieki conenct
-});
-
 
 // connect 
 gulp.task('server', function(){
