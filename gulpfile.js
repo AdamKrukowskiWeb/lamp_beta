@@ -17,8 +17,9 @@ gulp.task('sass', function(){
 });
 
 // connect 
-gulp.task('server', function(){
+gulp.task('connect', function(){
     connect.server({
+        root: 'app',
         livereload: true
     });
 });
@@ -36,7 +37,7 @@ gulp.task('watch', function(){
 });
 
 // Tasks
-gulp.task('default', ['sass','boostrap-sass','server','watch']);
+gulp.task('default', ['sass','boostrap-sass','connect','watch']);
 
 
 //http://andwecode.com/better-frontend-with-gulp-and-bower/
