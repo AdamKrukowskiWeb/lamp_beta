@@ -40,3 +40,4 @@ gulp.task('default', ['sass','boostrap-sass','server','watch']);
 
 
 //http://andwecode.com/better-frontend-with-gulp-and-bower/
+// gulp watch
